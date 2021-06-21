@@ -1,0 +1,259 @@
+running build
+running build_py
+creating build
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/atmtools
+copying atmtools/__init__.py -> build/lib.linux-x86_64-2.7/atmtools
+copying atmtools/atmtools.py -> build/lib.linux-x86_64-2.7/atmtools
+creating build/lib.linux-x86_64-2.7/atmtools/lib
+copying atmtools/lib/__init__.py -> build/lib.linux-x86_64-2.7/atmtools/lib
+copying atmtools/lib/configuration.py -> build/lib.linux-x86_64-2.7/atmtools/lib
+copying atmtools/lib/default_configuration.py -> build/lib.linux-x86_64-2.7/atmtools/lib
+copying atmtools/lib/rest_api.py -> build/lib.linux-x86_64-2.7/atmtools/lib
+copying atmtools/lib/variable.py -> build/lib.linux-x86_64-2.7/atmtools/lib
+running build_scripts
+creating build/scripts-2.7
+copying and adjusting cli/atm_set_variable -> build/scripts-2.7
+copying and adjusting cli/atm_energy -> build/scripts-2.7
+copying and adjusting cli/atm_run_rest_blocking -> build/scripts-2.7
+copying and adjusting cli/atm_kill -> build/scripts-2.7
+copying and adjusting cli/atm_timesync -> build/scripts-2.7
+copying and adjusting cli/atm_wait -> build/scripts-2.7
+copying and adjusting cli/atm_heartbeat -> build/scripts-2.7
+copying and adjusting cli/atm_upload -> build/scripts-2.7
+copying and adjusting cli/atm_download -> build/scripts-2.7
+copying and adjusting cli/atm_run -> build/scripts-2.7
+copying and adjusting cli/atm_get_variable -> build/scripts-2.7
+copying and adjusting cli/atm_sync -> build/scripts-2.7
+changing mode of build/scripts-2.7/atm_set_variable from 644 to 755
+changing mode of build/scripts-2.7/atm_energy from 644 to 755
+changing mode of build/scripts-2.7/atm_run_rest_blocking from 644 to 755
+changing mode of build/scripts-2.7/atm_kill from 644 to 755
+changing mode of build/scripts-2.7/atm_timesync from 644 to 755
+changing mode of build/scripts-2.7/atm_wait from 644 to 755
+changing mode of build/scripts-2.7/atm_heartbeat from 644 to 755
+changing mode of build/scripts-2.7/atm_upload from 644 to 755
+changing mode of build/scripts-2.7/atm_download from 644 to 755
+changing mode of build/scripts-2.7/atm_run from 644 to 755
+changing mode of build/scripts-2.7/atm_get_variable from 644 to 755
+changing mode of build/scripts-2.7/atm_sync from 644 to 755
+running install
+running bdist_egg
+running egg_info
+creating atmtools.egg-info
+writing requirements to atmtools.egg-info/requires.txt
+writing atmtools.egg-info/PKG-INFO
+writing top-level names to atmtools.egg-info/top_level.txt
+writing dependency_links to atmtools.egg-info/dependency_links.txt
+writing manifest file 'atmtools.egg-info/SOURCES.txt'
+reading manifest file 'atmtools.egg-info/SOURCES.txt'
+writing manifest file 'atmtools.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/atmtools
+creating build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib.linux-x86_64-2.7/atmtools/lib/variable.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib.linux-x86_64-2.7/atmtools/lib/rest_api.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib.linux-x86_64-2.7/atmtools/lib/default_configuration.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib.linux-x86_64-2.7/atmtools/lib/configuration.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib.linux-x86_64-2.7/atmtools/lib/__init__.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib.linux-x86_64-2.7/atmtools/atmtools.py -> build/bdist.linux-x86_64/egg/atmtools
+copying build/lib.linux-x86_64-2.7/atmtools/__init__.py -> build/bdist.linux-x86_64/egg/atmtools
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/variable.py to variable.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/rest_api.py to rest_api.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/default_configuration.py to default_configuration.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/configuration.py to configuration.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/__init__.py to __init__.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/atmtools.py to atmtools.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/__init__.py to __init__.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+installing scripts to build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+running install_scripts
+running build_scripts
+creating build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_sync -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_get_variable -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_run -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_download -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_upload -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_heartbeat -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_wait -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_timesync -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_kill -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_run_rest_blocking -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_energy -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-2.7/atm_set_variable -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_sync to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_get_variable to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_run to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_download to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_upload to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_heartbeat to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_wait to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_timesync to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_kill to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_run_rest_blocking to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_energy to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_set_variable to 755
+copying atmtools.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating dist
+creating 'dist/atmtools-1.4.0-py2.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing atmtools-1.4.0-py2.7.egg
+Copying atmtools-1.4.0-py2.7.egg to /usr/local/lib/python2.7/dist-packages
+Adding atmtools 1.4.0 to easy-install.pth file
+Installing atm_heartbeat script to /usr/local/bin
+Installing atm_sync script to /usr/local/bin
+Installing atm_timesync script to /usr/local/bin
+Installing atm_upload script to /usr/local/bin
+Installing atm_get_variable script to /usr/local/bin
+Installing atm_wait script to /usr/local/bin
+Installing atm_set_variable script to /usr/local/bin
+Installing atm_run script to /usr/local/bin
+Installing atm_download script to /usr/local/bin
+Installing atm_kill script to /usr/local/bin
+Installing atm_energy script to /usr/local/bin
+Installing atm_run_rest_blocking script to /usr/local/bin
+
+Installed /usr/local/lib/python2.7/dist-packages/atmtools-1.4.0-py2.7.egg
+Processing dependencies for atmtools==1.4.0
+Searching for requests==2.21.0
+Best match: requests 2.21.0
+Adding requests 2.21.0 to easy-install.pth file
+
+Using /usr/lib/python2.7/dist-packages
+Finished processing dependencies for atmtools==1.4.0
+running build
+running build_py
+creating build/lib
+creating build/lib/atmtools
+copying atmtools/__init__.py -> build/lib/atmtools
+copying atmtools/atmtools.py -> build/lib/atmtools
+creating build/lib/atmtools/lib
+copying atmtools/lib/__init__.py -> build/lib/atmtools/lib
+copying atmtools/lib/configuration.py -> build/lib/atmtools/lib
+copying atmtools/lib/default_configuration.py -> build/lib/atmtools/lib
+copying atmtools/lib/rest_api.py -> build/lib/atmtools/lib
+copying atmtools/lib/variable.py -> build/lib/atmtools/lib
+running build_scripts
+creating build/scripts-3.7
+copying and adjusting cli/atm_set_variable -> build/scripts-3.7
+copying and adjusting cli/atm_energy -> build/scripts-3.7
+copying and adjusting cli/atm_run_rest_blocking -> build/scripts-3.7
+copying and adjusting cli/atm_kill -> build/scripts-3.7
+copying and adjusting cli/atm_timesync -> build/scripts-3.7
+copying and adjusting cli/atm_wait -> build/scripts-3.7
+copying and adjusting cli/atm_heartbeat -> build/scripts-3.7
+copying and adjusting cli/atm_upload -> build/scripts-3.7
+copying and adjusting cli/atm_download -> build/scripts-3.7
+copying and adjusting cli/atm_run -> build/scripts-3.7
+copying and adjusting cli/atm_get_variable -> build/scripts-3.7
+copying and adjusting cli/atm_sync -> build/scripts-3.7
+changing mode of build/scripts-3.7/atm_set_variable from 644 to 755
+changing mode of build/scripts-3.7/atm_energy from 644 to 755
+changing mode of build/scripts-3.7/atm_run_rest_blocking from 644 to 755
+changing mode of build/scripts-3.7/atm_kill from 644 to 755
+changing mode of build/scripts-3.7/atm_timesync from 644 to 755
+changing mode of build/scripts-3.7/atm_wait from 644 to 755
+changing mode of build/scripts-3.7/atm_heartbeat from 644 to 755
+changing mode of build/scripts-3.7/atm_upload from 644 to 755
+changing mode of build/scripts-3.7/atm_download from 644 to 755
+changing mode of build/scripts-3.7/atm_run from 644 to 755
+changing mode of build/scripts-3.7/atm_get_variable from 644 to 755
+changing mode of build/scripts-3.7/atm_sync from 644 to 755
+running install
+running bdist_egg
+running egg_info
+writing atmtools.egg-info/PKG-INFO
+writing dependency_links to atmtools.egg-info/dependency_links.txt
+writing requirements to atmtools.egg-info/requires.txt
+writing top-level names to atmtools.egg-info/top_level.txt
+reading manifest file 'atmtools.egg-info/SOURCES.txt'
+writing manifest file 'atmtools.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/atmtools
+creating build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib/atmtools/lib/variable.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib/atmtools/lib/rest_api.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib/atmtools/lib/default_configuration.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib/atmtools/lib/configuration.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib/atmtools/lib/__init__.py -> build/bdist.linux-x86_64/egg/atmtools/lib
+copying build/lib/atmtools/atmtools.py -> build/bdist.linux-x86_64/egg/atmtools
+copying build/lib/atmtools/__init__.py -> build/bdist.linux-x86_64/egg/atmtools
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/variable.py to variable.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/rest_api.py to rest_api.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/default_configuration.py to default_configuration.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/configuration.py to configuration.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/lib/__init__.py to __init__.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/atmtools.py to atmtools.cpython-37.pyc
+byte-compiling build/bdist.linux-x86_64/egg/atmtools/__init__.py to __init__.cpython-37.pyc
+creating build/bdist.linux-x86_64/egg/EGG-INFO
+installing scripts to build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+running install_scripts
+running build_scripts
+creating build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_sync -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_get_variable -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_run -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_download -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_upload -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_heartbeat -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_wait -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_timesync -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_kill -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_run_rest_blocking -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_energy -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+copying build/scripts-3.7/atm_set_variable -> build/bdist.linux-x86_64/egg/EGG-INFO/scripts
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_sync to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_get_variable to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_run to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_download to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_upload to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_heartbeat to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_wait to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_timesync to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_kill to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_run_rest_blocking to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_energy to 755
+changing mode of build/bdist.linux-x86_64/egg/EGG-INFO/scripts/atm_set_variable to 755
+copying atmtools.egg-info/PKG-INFO -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/SOURCES.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/dependency_links.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/requires.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+copying atmtools.egg-info/top_level.txt -> build/bdist.linux-x86_64/egg/EGG-INFO
+creating 'dist/atmtools-1.4.0-py3.7.egg' and adding 'build/bdist.linux-x86_64/egg' to it
+removing 'build/bdist.linux-x86_64/egg' (and everything under it)
+Processing atmtools-1.4.0-py3.7.egg
+Copying atmtools-1.4.0-py3.7.egg to /usr/local/lib/python3.7/dist-packages
+Adding atmtools 1.4.0 to easy-install.pth file
+Installing atm_download script to /usr/local/bin
+Installing atm_energy script to /usr/local/bin
+Installing atm_get_variable script to /usr/local/bin
+Installing atm_heartbeat script to /usr/local/bin
+Installing atm_kill script to /usr/local/bin
+Installing atm_run script to /usr/local/bin
+Installing atm_run_rest_blocking script to /usr/local/bin
+Installing atm_set_variable script to /usr/local/bin
+Installing atm_sync script to /usr/local/bin
+Installing atm_timesync script to /usr/local/bin
+Installing atm_upload script to /usr/local/bin
+Installing atm_wait script to /usr/local/bin
+
+Installed /usr/local/lib/python3.7/dist-packages/atmtools-1.4.0-py3.7.egg
+Processing dependencies for atmtools==1.4.0
+Searching for requests==2.21.0
+Best match: requests 2.21.0
+Adding requests 2.21.0 to easy-install.pth file
+
+Using /usr/lib/python3/dist-packages
+Finished processing dependencies for atmtools==1.4.0

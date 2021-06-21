@@ -1,0 +1,158 @@
+#!/usr/bin/env python
+
+'''
+Bootstrap the host for the experiment scripts.
+Sets environment variables and deploys atmtools.
+The resulting variables in /etc/environment are all double quoted strings.
+'''
+
+import logging
+import json
+import socket
+from time import time
+from datetime import datetime
+import argparse
+import subprocess
+import tarfile
+import ssl
+
+try:
+    # For Python 3.0 and later
+    from urllib.request import urlopen
+except ImportError:
+    # Fall back to Python 2's urllib2
+    from urllib2 import urlopen
+
+logging.basicConfig(level='DEBUG',
+                    format='[%(name)s] [%(levelname)s] %(message)s')
+
+# atmd uses self-signed certificate, so don't verify it
+SSL_CONTEXT = ssl._create_unverified_context()
+
+
+def get_time():
+    '''
+    current time
+    '''
+
+    return datetime.fromtimestamp(time()).strftime('%Y-%m-%d %H:%M:%S')
+
+
+def get_allocation_data(atm_server, hostname):
+    '''
+    retrieve the allocation data for this node
+    '''
+
+    url = '{}/allocations/get/{}'.format(atm_server, hostname)
+    text = urlopen(url, context=SSL_CONTEXT).read().decode('utf-8')
+    return json.loads(text)
+
+
+def write_variables(alloc, atm_server, hostname):
+    '''
+    store atm variables locally
+    '''
+
+    # save json data
+    alloc.update({'hostname': hostname})
+    alloc.update({'atm_server': atm_server})
+    with open('/tmp/atm_variables.json', 'w') as handle:
+        json.dump(alloc, handle, indent=2, sort_keys=True)
+
+
+def deploy_atmtools(atm_server, atmtools_archive):
+    '''
+    download and install atmtools
+    '''
+
+    atmtools_data = urlopen('{}/files/{}'.format(atm_server,
+                                                 atmtools_archive),
+                            context=SSL_CONTEXT)
+    atmtools_tar = atmtools_data.read()
+    atmtools_file = '/tmp/' + atmtools_archive
+
+    with open(atmtools_file, 'wb') as handle:
+        handle.write(atmtools_tar)
+
+    pwd = '/usr/local/atmtools'
+
+    atmtools = tarfile.open(atmtools_file)
+    atmtools.extractall(path=pwd)
+
+    subprocess.check_call(
+        ['/usr/bin/python', 'setup.py', 'build', '--force'], cwd=pwd)
+    subprocess.check_call(
+        ['/usr/bin/python', 'setup.py', 'install', '--force'], cwd=pwd)
+    try:
+        subprocess.check_call(
+            ['/usr/bin/python3', 'setup.py', 'build', '--force'], cwd=pwd)
+        subprocess.check_call(
+            ['/usr/bin/python3', 'setup.py', 'install', '--force'], cwd=pwd)
+    except subprocess.CalledProcessError:
+        logging.warning('Unable to install python3 atmtools')
+
+
+def bootstrap(atm_server, atmtools_archive, hostname):
+    '''
+    perform a atm bootstrap
+    '''
+
+    logging.debug('atm_server: %s', atm_server)
+
+    logging.info('Start bootstrapping host: %s', get_time())
+
+    alloc = get_allocation_data(atm_server, hostname)
+
+    write_variables(alloc, atm_server, hostname)
+
+    logging.info('Finished setting up variables: %s', get_time())
+
+    deploy_atmtools(atm_server, atmtools_archive)
+
+    logging.info('Finished setting up atmtools: %s', get_time())
+
+
+def add_fqdn_to_hosts(fqdn, hostname):
+    '''
+    add FQDN and hostname to /etc/hosts as defined by 'man hostname'
+    see #162
+    '''
+
+    search_str = '127.0.1.1'
+    insert_line = '{}\t{} {}'.format(search_str, fqdn, hostname)
+
+    lines = []
+    # if the search string is in line, delete it
+    with open('/etc/hosts', 'r') as fh:
+        for line in fh:
+            if search_str not in line:
+                lines.append(line.strip('\n'))
+
+    # append line to be inserted and write file from scratch
+    lines.append(insert_line)
+    with open('/etc/hosts', 'w') as fh:
+        fh.write('\n'.join(lines))
+        fh.write('\n')
+
+
+def main():
+    '''
+    Main function: argparser and bootstrap invocation
+    '''
+
+    parser = argparse.ArgumentParser(description='Bootstrap a host.')
+    parser.add_argument('atm_server', help='address of the atm server')
+    parser.add_argument('atmtools_archive', help='atmtools archive to deploy')
+    parser.add_argument('--fqdn', type=str, help='add a FQDN to /etc/hosts')
+    args = parser.parse_args()
+
+    hostname = socket.gethostname()
+
+    bootstrap(args.atm_server, args.atmtools_archive, hostname)
+
+    if args.fqdn:
+        add_fqdn_to_hosts(args.fqdn, hostname)
+
+
+if __name__ == '__main__':
+    main()
